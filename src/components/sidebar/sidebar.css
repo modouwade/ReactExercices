@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #383838;
+    font-family: 'Josefin Sans' ,sans-serif;
+}
+.content {
+    transition: 1s;
+    color: #09F88A;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+p {
+    padding: 2rem 5rem;
+}
+
+.side-bar {
+    position: absolute;
+    width: 230px;
+    height: 130%;
+    background: #5c8f77;
+    left: -300px;
+    transition: .3s ease-out;
+    z-index: 4;
+}
+.toggle-button {
+    position: absolute;
+    top: 30px;
+    left: 310px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.toggle-button span {
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    background: #09F88A;
+    display: block;
+    transition: .5s ease;
+    margin-top: 4px;
+}
+
+li {
+    color: #292929;
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+li:hover {
+    color: #FCFCFC;
+    background: #292929;
+}
+.side-bar.active{
+    left: 0;
+}
+
+.side-bar.active .toggle-button {
+    top: 2.5rem;
+    left: 235px;
+}
+.side-bar.active span {
+    position: absolute;
+}
+
+.side-bar.active span:nth-child(1){
+ transform: rotate(45deg);
+}
+
+.side-bar.active span:nth-child(2){
+    opacity: 0;
+}
+
+.side-bar.active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.side-bar.active ~ .content {
+    opacity: .3;
+}
+
